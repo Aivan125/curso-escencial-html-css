@@ -1,0 +1,225 @@
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold-italic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-italic.otf");
+  font-style: normal;
+  font-weight: bold; /*bold es igual a 700*/
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-regular.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root{
+  font-size: 16px;
+  --gray30: #212121;
+  --gray20: #212449;
+  --gray10: #616161
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  color: var(--gray30);
+  /* font-family: charter; */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--gray30);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: normal;
+  /* text-align: end; */
+  /* margin-top: 64px;
+  margin-bottom: 16px;
+  margin-left: 20px;
+  margin-right: 10px; */
+  /* margin: top right bottom left; */
+  /* margin: 64px 10px 16px 20px; */
+  /* margin: 20px 50px; Se puede resumir, por ejemplo: 20px significa arriba y abajo y 50px izquierda y derecha */
+  /* border: 10px solid red; */
+  /* width: 1000px; */
+  /* box-sizing: border-box; */
+  /* padding: 0 50px; */
+}
+
+header {
+  font-size: 14px ;
+  color:var(--gray10);
+  position: absolute;
+  z-index: 1;
+  top: 64px;
+  left: -232px;
+  width: 188px
+}
+
+header li {
+  margin-bottom: 16px;
+}
+header a {
+  color: #616161;
+  text-decoration: none;
+}
+
+header a:hover{
+  color: var(--gray10);
+}
+
+nav details summary{
+  font-weight: bold;
+  line-height: 24px;
+}
+
+/* h1 + p {
+  background: orange;
+  margin-bottom: 64px; */
+/* } */
+
+hr {
+margin: 64px 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  position: relative;
+
+}
+
+pre {
+  background: #FEC62E;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
+
+}
+
+blockquote {
+  margin: 32px 0;
+  /* padding-left: 16px; */
+  font-size: 24px;
+  /* border: 1px solid red; */
+  /* border-left: 4px solid var(--gray30); */
+  padding: 1px 0 1px 16px ;
+  border: 2px solid var(--gray30);
+  border-radius: 15px;
+
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+blockquote span::before {
+  content: '-';
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+
+}
+.main {
+  /* background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/patron.png') Permite poner diferentes imagenes; */
+  /* border: 1px solid red; */
+  /* position: relative; */
+}
+
+.wrapper {
+  width: 902px;
+  margin: auto; /* Solo sirve cuando ponemos un ancho definido*/
+  /* background: red; */
+}
+
+.main-content {
+  background: white;
+}
+
+.hero {
+  /* background: url('../images/patron.png'); */
+  background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/patron.png') /* Permite poner diferentes imagenes; */;
+  height: 350px;
+  /* background-repeat: no-repeat */
+  /* background-position: right bottom; Siempre es eje x y lueg eje Y */
+}
+
+.section-content {
+  margin-top: 164px;
+  position: relative;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+  padding-bottom: 8 px;
+  /* background: red; */
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) '. ';
+}
+
+.section-content h3::after {
+  content:  '';
+  width: 80px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
