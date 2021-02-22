@@ -1,0 +1,339 @@
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold-italic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-italic.otf");
+  font-style: normal;
+  font-weight: bold; /*bold es igual a 700*/
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-regular.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root{
+  font-size: 16px;
+  --white30: white;
+  --white20: #A5A3A5;
+  --white10: #3A3539;;
+}
+
+p {
+  color: var(--white20);
+  text-align: justify;
+}
+
+body {
+  color: var(--white30);
+  /* font-family: charter; */
+  font-family: 'Nunito', sans-serif;
+  background: #251F24;
+  /* margin-inline: 100px; */
+  /* es el equivalente a margin: 0 100px */
+  /* margin-block: 100px; */
+  /* margin-block-start: 100px;
+  margin-block-end: 100px; */
+  /* border: 1px solid red; */
+
+
+}
+
+a {
+  color: var(--white30);
+
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+  /* text-align: end; */
+  margin-block-start: 20px;
+  margin-block-end: 16px;
+  /* text-align: end; /*Para valores lógicos o start para a izquierda */
+}
+
+header {
+  font-size: 14px ;
+  color: var(--white30);
+  margin-block-start: 20px;
+  /* position: absolute;
+  inset-inline-start: -400px;
+  max-inline-size: 188px;
+  margin-block-start: 64px; */
+   /* margin: 100%; */
+
+}
+
+header li {
+  color: var(--white20);
+  margin-block-end: 16px;
+}
+
+header a {
+  color: var(--white20);
+  text-decoration: none;
+}
+
+header a:hover{
+  color: var(--white10);
+}
+
+nav details summary{
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+pre {
+background: var(--white10);
+padding: 40px;
+overflow: auto;
+border-radius: 8px;
+
+}
+
+hr {
+margin-block: 40px;
+/* border: 1px solid rgba(97, 97, 97, 0.2); */
+border-color: rgba(97, 97, 97, 0.2);
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+  /* padding: 24px; */
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+blockquote p {
+  color: var(--white30);
+}
+
+form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white30);
+  background: #251F24;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  display: block;
+  margin-block-end: 24px;
+}
+
+form input::-webkit-input-placeholder {
+  color: var(--white20)
+}
+
+form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+
+.hero {
+ background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  /* background: url('../images/patron.png'); */
+  /* background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/patron.png') Permite poner diferentes imagenes; */
+
+  block-size: 150px;
+  /* background-repeat: no-repeat */
+  /* background-position: right bottom; Siempre es eje x y lueg eje Y */
+
+}
+
+  .section-content img {
+    margin-block-start: 40px;
+    display: block; /*  se tiene que poner block porque son inline y de lo contratrio no hay margin collapsing*/
+    /* max-width: 100%; */
+    max-inline-size: 100%;
+  }
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) '. ';
+}
+
+/* .section-content h3::after {
+  content:  '';
+  width: 32px;
+  height: 4px;
+  background: var(--white30);
+  display: inline-block;
+} */
+
+.main {
+  /* border: 1px solid red; */
+  /* background: blue; */
+}
+
+.wrapper {
+  /* border: 1px solid yellow; */
+  /* Se calculó el ancho en base al Figma*/
+max-inline-size: 902px;
+margin: auto;
+/* border: 1px solid red; */
+  /* background: blue; */
+}
+
+.main-content {
+  /* border: 1px solid blue; */
+  padding-inline: 16px; /*  solo para  cambiar el padding lateralmente*/
+  /* background: blue */
+  /* margin-inline-start: 24px; */
+}
+
+.main hr {
+  display: none;
+}
+
+.section-content ol li {
+  color: var(--white20);
+}
+
+.section-content ul li {
+  color: var(--white20);
+}
+
+/* .section-content ul  {
+  color: white;
+} */
+
+.header {
+  /* position: sticky;
+  inset-block-start: 0px; */
+  /* border: 1px solid yellow; */
+  /* background: yellow;
+  width: 500px;
+  height: 500px; */
+  /* margin-block-end: 64px; */
+
+}
+
+.header-content {
+  /* position: relative; */
+  /* inset-block-start: 64px; */
+  /* inset-inline-start: 100px;
+  max-inline-size: 188px;
+
+
+  /* margin-block-start: 64px;
+   margin: 100%;  */
+
+   padding-inline: 20px;
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.video {
+  /* border: 1px solid blue; */
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+.slider-bullet-list {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin-block-start: 20px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+}
+
+/* .form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white30);
+  background: #251F24;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+} */
+
+@media screen and (min-width: 1700px) {
+  .hero {
+     block-size: 350px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: 0px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+
+  }
+
+  header {
+    position: absolute;
+    inset-inline-start: -400px;
+    max-inline-size: 188px;
+    /* margin-block-start: 64px; */
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
+}
